@@ -1,1 +1,16 @@
-going to learn too many arguments
+#!/bin/bash
+
+cont=$1
+
+echo "creating $cont containers................"
+sleep 2; 
+ for i in `seq cont`
+ do	 
+echo "================================"
+echo "creating www.sulluru$i containers...."
+sleep 1;
+sudo docker run -it --name ser33 -d nagesvkn/node3 /bin/bash
+echo "www.sulluru$i containers has been created"
+echo "================================="
+done
+
